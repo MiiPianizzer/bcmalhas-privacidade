@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exclusão de Dados — BC CRM</title>
+<meta name="description" content="Instruções para solicitar a exclusão de dados pessoais no aplicativo BC CRM, mantido pela BC Malhas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #faf9f6;
+    --surface: #ffffff;
+    --ink: #1b2124;
+    --ink-muted: #5b6570;
+    --accent: #2f5d50;
+    --accent-soft: #e4ede9;
+    --line: #e1ded6;
+    --focus: #2f5d50;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14181a;
+      --surface: #1c2124;
+      --ink: #ede8e0;
+      --ink-muted: #9aa3a8;
+      --accent: #7bc8b0;
+      --accent-soft: #22322c;
+      --line: #2a3033;
+      --focus: #7bc8b0;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #14181a;
+    --surface: #1c2124;
+    --ink: #ede8e0;
+    --ink-muted: #9aa3a8;
+    --accent: #7bc8b0;
+    --accent-soft: #22322c;
+    --line: #2a3033;
+    --focus: #7bc8b0;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--accent); text-decoration-thickness: 1px; }
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  .page {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: clamp(2rem, 6vw, 4.5rem) clamp(1.25rem, 5vw, 2rem) 5rem;
+  }
+
+  header.masthead {
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 1.75rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .eyebrow {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 0.9rem;
+  }
+
+  h1 {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(1.9rem, 4.2vw, 2.5rem);
+    line-height: 1.15;
+    margin: 0 0 0.75rem;
+    text-wrap: balance;
+    letter-spacing: -0.01em;
+  }
+
+  .dek {
+    color: var(--ink-muted);
+    font-size: 1rem;
+    max-width: 56ch;
+    margin: 0;
+  }
+
+  .summary-box {
+    display: flex;
+    gap: 0.9rem;
+    background: var(--accent-soft);
+    border-radius: 10px;
+    padding: 1.2rem 1.4rem;
+    margin: 0 0 3rem;
+  }
+
+  .summary-box .mark {
+    font-family: "Source Serif 4", serif;
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  .summary-box p { margin: 0; font-size: 0.94rem; }
+
+  section.clause {
+    padding-top: 2.6rem;
+    scroll-margin-top: 1.5rem;
+  }
+
+  section.clause + section.clause {
+    border-top: 1px solid var(--line);
+  }
+
+  .clause-head {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .clause-num {
+    font-family: "IBM Plex Mono", monospace;
+    color: var(--accent);
+    font-size: 0.95rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  h2 {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  p { margin: 0 0 1rem; max-width: 62ch; }
+  section.clause > p:last-child { margin-bottom: 0; }
+
+  ol.steps {
+    margin: 0.6rem 0 1rem;
+    padding-left: 1.3rem;
+    max-width: 60ch;
+  }
+  ol.steps li { margin-bottom: 0.7rem; }
+  ol.steps li:last-child { margin-bottom: 0; }
+
+  ul.plain { margin: 0.6rem 0 1rem; padding-left: 1.2rem; max-width: 60ch; }
+  ul.plain li { margin-bottom: 0.4rem; }
+
+  .contact-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 1.3rem 1.5rem;
+    margin-top: 1rem;
+  }
+  .contact-card dt {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin: 0.7rem 0 0.15rem;
+  }
+  .contact-card dt:first-child { margin-top: 0; }
+  .contact-card dd { margin: 0; }
+
+  footer.page-footer {
+    margin-top: 3.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+    color: var(--ink-muted);
+    font-size: 0.82rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-family: "IBM Plex Mono", monospace;
+  }
+
+  @media (max-width: 520px) {
+    .summary-box { flex-direction: column; }
+    footer.page-footer { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <header class="masthead">
+    <p class="eyebrow">BC Malhas · Documento legal</p>
+    <h1>Exclusão de Dados — BC CRM</h1>
+    <p class="dek">Como solicitar a exclusão dos seus dados pessoais coletados pelo aplicativo BC CRM, mantido pela BC Indústria Comércio e Representações de Malhas Ltda.</p>
+  </header>
+
+  <div class="summary-box">
+    <span class="mark">§</span>
+    <p>Você pode solicitar a exclusão da sua conta e dos seus dados a qualquer momento, gratuitamente, enviando um e-mail para <strong>miilenapianizzer@gmail.com</strong>. Atendemos o pedido em até 30 dias.</p>
+  </div>
+
+  <section class="clause" id="s1">
+    <div class="clause-head">
+      <span class="clause-num">01</span>
+      <h2>Como solicitar a exclusão</h2>
+    </div>
+    <p>Para solicitar a exclusão dos seus dados pessoais do BC CRM, siga os passos abaixo:</p>
+    <ol class="steps">
+      <li>Envie um e-mail para <a href="mailto:miilenapianizzer@gmail.com">miilenapianizzer@gmail.com</a> com o assunto "Exclusão de dados".</li>
+      <li>Informe o e-mail, o número de WhatsApp ou o ID de usuário cadastrado no aplicativo, para que possamos localizar sua conta.</li>
+      <li>Você receberá uma confirmação de recebimento em até 5 dias úteis.</li>
+    </ol>
+  </section>
+
+  <section class="clause" id="s2">
+    <div class="clause-head">
+      <span class="clause-num">02</span>
+      <h2>O que é excluído</h2>
+    </div>
+    <p>Ao confirmarmos a solicitação, excluímos permanentemente da nossa base ativa:</p>
+    <ul class="plain">
+      <li>Dados de conta: e-mail, ID de usuário, WhatsApp, idade e sexo;</li>
+      <li>Histórico de uso associado à sua conta dentro do aplicativo.</li>
+    </ul>
+    <p>O prazo total para conclusão da exclusão é de até <strong>30 dias</strong> a partir da confirmação do pedido.</p>
+  </section>
+
+  <section class="clause" id="s3">
+    <div class="clause-head">
+      <span class="clause-num">03</span>
+      <h2>O que pode ser retido</h2>
+    </div>
+    <p>Alguns dados podem ser mantidos por período adicional quando exigido por lei, como registros fiscais, contábeis ou necessários para cumprimento de obrigação legal ou regulatória. Nesses casos, os dados ficam retidos apenas pelo prazo exigido em lei e não são mais utilizados para nenhuma outra finalidade.</p>
+  </section>
+
+  <section class="clause" id="s4">
+    <div class="clause-head">
+      <span class="clause-num">04</span>
+      <h2>Dúvidas</h2>
+    </div>
+    <p>Para dúvidas sobre este processo ou sobre o tratamento dos seus dados, consulte também nossa <a href="https://miipianizzer.github.io/bcmalhas-privacidade/">Política de Privacidade</a> ou entre em contato diretamente.</p>
+    <dl class="contact-card">
+      <dt>Controlador dos dados</dt>
+      <dd>BC Indústria Comércio e Representações de Malhas Ltda</dd>
+      <dt>CNPJ</dt>
+      <dd>06.078.921/0001-53</dd>
+      <dt>E-mail de contato</dt>
+      <dd><a href="mailto:miilenapianizzer@gmail.com">miilenapianizzer@gmail.com</a></dd>
+    </dl>
+  </section>
+
+  <footer class="page-footer">
+    <span>BC CRM · BC Malhas</span>
+    <span>Vigente desde 26/08/2026</span>
+  </footer>
+
+</div>
+</body>
+</html>

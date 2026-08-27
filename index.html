@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidade — BC CRM</title>
+<meta name="description" content="Política de privacidade do aplicativo BC CRM, mantido pela BC Indústria Comércio e Representações de Malhas Ltda.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #faf9f6;
+    --surface: #ffffff;
+    --ink: #1b2124;
+    --ink-muted: #5b6570;
+    --accent: #2f5d50;
+    --accent-soft: #e4ede9;
+    --line: #e1ded6;
+    --focus: #2f5d50;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14181a;
+      --surface: #1c2124;
+      --ink: #ede8e0;
+      --ink-muted: #9aa3a8;
+      --accent: #7bc8b0;
+      --accent-soft: #22322c;
+      --line: #2a3033;
+      --focus: #7bc8b0;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #14181a;
+    --surface: #1c2124;
+    --ink: #ede8e0;
+    --ink-muted: #9aa3a8;
+    --accent: #7bc8b0;
+    --accent-soft: #22322c;
+    --line: #2a3033;
+    --focus: #7bc8b0;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--accent); text-decoration-thickness: 1px; }
+  a:focus-visible, button:focus-visible, summary:focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  .page {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: clamp(2rem, 6vw, 4.5rem) clamp(1.25rem, 5vw, 2rem) 5rem;
+  }
+
+  header.masthead {
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 1.75rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .eyebrow {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 0.9rem;
+  }
+
+  h1 {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(1.9rem, 4.2vw, 2.5rem);
+    line-height: 1.15;
+    margin: 0 0 0.75rem;
+    text-wrap: balance;
+    letter-spacing: -0.01em;
+  }
+
+  .dek {
+    color: var(--ink-muted);
+    font-size: 1rem;
+    max-width: 56ch;
+    margin: 0 0 1.4rem;
+  }
+
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 0.75rem 1.5rem;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.82rem;
+    color: var(--ink-muted);
+  }
+
+  .meta-grid dt {
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.68rem;
+    color: var(--ink-muted);
+    margin: 0 0 0.2rem;
+  }
+
+  .meta-grid dd {
+    margin: 0;
+    color: var(--ink);
+    font-variant-numeric: tabular-nums;
+  }
+
+  nav.toc {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 1.1rem 1.3rem;
+    margin: 0 0 2.75rem;
+  }
+
+  nav.toc p {
+    margin: 0 0 0.7rem;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+
+  nav.toc ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    columns: 2;
+    column-gap: 1.5rem;
+  }
+
+  nav.toc li { break-inside: avoid; margin-bottom: 0.45rem; }
+
+  nav.toc a {
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 0.92rem;
+  }
+  nav.toc a:hover { color: var(--accent); text-decoration: underline; }
+  nav.toc .num {
+    font-family: "IBM Plex Mono", monospace;
+    color: var(--accent);
+    margin-right: 0.4rem;
+    font-size: 0.82rem;
+  }
+
+  .summary-box {
+    display: flex;
+    gap: 0.9rem;
+    background: var(--accent-soft);
+    border-radius: 10px;
+    padding: 1.2rem 1.4rem;
+    margin: 0 0 3rem;
+  }
+
+  .summary-box .mark {
+    font-family: "Source Serif 4", serif;
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  .summary-box ul {
+    margin: 0;
+    padding-left: 1.1rem;
+    font-size: 0.94rem;
+  }
+  .summary-box li { margin-bottom: 0.35rem; }
+  .summary-box li:last-child { margin-bottom: 0; }
+
+  section.clause {
+    padding-top: 2.6rem;
+    scroll-margin-top: 1.5rem;
+  }
+
+  section.clause + section.clause {
+    border-top: 1px solid var(--line);
+  }
+
+  .clause-head {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .clause-num {
+    font-family: "IBM Plex Mono", monospace;
+    color: var(--accent);
+    font-size: 0.95rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  h2 {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-weight: 600;
+    font-size: 1.35rem;
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  h3 {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 600;
+    font-size: 0.98rem;
+    margin: 1.4rem 0 0.5rem;
+  }
+
+  p { margin: 0 0 1rem; max-width: 68ch; }
+  section.clause > p:last-child { margin-bottom: 0; }
+
+  ul.data-list, ul.plain { margin: 0.6rem 0 1rem; padding-left: 1.2rem; max-width: 66ch; }
+  ul.data-list li, ul.plain li { margin-bottom: 0.4rem; }
+
+  table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.8rem 0 1.2rem;
+    font-size: 0.92rem;
+  }
+  table.data-table th, table.data-table td {
+    text-align: left;
+    padding: 0.55rem 0.8rem;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  table.data-table th {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    font-weight: 500;
+  }
+  .table-wrap { overflow-x: auto; }
+
+  .contact-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 1.3rem 1.5rem;
+    margin-top: 1rem;
+  }
+  .contact-card dt {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin: 0.7rem 0 0.15rem;
+  }
+  .contact-card dt:first-child { margin-top: 0; }
+  .contact-card dd { margin: 0; }
+
+  footer.page-footer {
+    margin-top: 3.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+    color: var(--ink-muted);
+    font-size: 0.82rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-family: "IBM Plex Mono", monospace;
+  }
+
+  @media (max-width: 520px) {
+    nav.toc ol { columns: 1; }
+    .summary-box { flex-direction: column; }
+    footer.page-footer { flex-direction: column; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { scroll-behavior: auto !important; }
+  }
+
+  html { scroll-behavior: smooth; }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <header class="masthead">
+    <p class="eyebrow">BC Malhas · Documento legal</p>
+    <h1>Política de Privacidade — BC CRM</h1>
+    <p class="dek">Como o aplicativo BC CRM, mantido pela BC Indústria Comércio e Representações de Malhas Ltda, coleta, usa, compartilha e protege dados pessoais.</p>
+    <dl class="meta-grid">
+      <div>
+        <dt>Controlador</dt>
+        <dd>BC Indústria Comércio e Representações de Malhas Ltda</dd>
+      </div>
+      <div>
+        <dt>CNPJ</dt>
+        <dd>06.078.921/0001-53</dd>
+      </div>
+      <div>
+        <dt>Localização</dt>
+        <dd>Brusque/SC, Brasil</dd>
+      </div>
+      <div>
+        <dt>Vigência</dt>
+        <dd>26 de agosto de 2026</dd>
+      </div>
+    </dl>
+  </header>
+
+  <nav class="toc" aria-label="Sumário">
+    <p>Sumário</p>
+    <ol>
+      <li><a href="#s1"><span class="num">01</span>Escopo desta política</a></li>
+      <li><a href="#s2"><span class="num">02</span>Dados que coletamos</a></li>
+      <li><a href="#s3"><span class="num">03</span>Como usamos os dados</a></li>
+      <li><a href="#s4"><span class="num">04</span>Cookies e tecnologias de rastreamento</a></li>
+      <li><a href="#s5"><span class="num">05</span>Compartilhamento com terceiros</a></li>
+      <li><a href="#s6"><span class="num">06</span>Transferência internacional</a></li>
+      <li><a href="#s7"><span class="num">07</span>Retenção de dados</a></li>
+      <li><a href="#s8"><span class="num">08</span>Segurança da informação</a></li>
+      <li><a href="#s9"><span class="num">09</span>Seus direitos (LGPD)</a></li>
+      <li><a href="#s10"><span class="num">10</span>Residentes da Califórnia (CCPA/CPRA)</a></li>
+      <li><a href="#s11"><span class="num">11</span>Crianças e adolescentes</a></li>
+      <li><a href="#s12"><span class="num">12</span>Como cancelar a coleta</a></li>
+      <li><a href="#s13"><span class="num">13</span>Alterações a esta política</a></li>
+      <li><a href="#s14"><span class="num">14</span>Contato e encarregado</a></li>
+    </ol>
+  </nav>
+
+  <div class="summary-box">
+    <span class="mark">§</span>
+    <ul>
+      <li>Coletamos apenas os dados necessários para operar o BC CRM: dados de conta (e-mail, ID de usuário, WhatsApp, idade e sexo, quando informados) e dados técnicos de uso (IP, páginas acessadas, tempo de uso, sistema operacional).</li>
+      <li>Nunca vendemos dados pessoais. Compartilhamos apenas dados agregados e anonimizados com serviços externos.</li>
+      <li>Você pode solicitar acesso, correção ou exclusão dos seus dados a qualquer momento pelo e-mail de contato ao final desta página.</li>
+    </ul>
+  </div>
+
+  <section class="clause" id="s1">
+    <div class="clause-head">
+      <span class="clause-num">01</span>
+      <h2>Escopo desta política</h2>
+    </div>
+    <p>Esta Política de Privacidade regula a coleta, o uso, o armazenamento e o compartilhamento de dados pessoais realizados pelo aplicativo <strong>BC CRM</strong>, disponível para dispositivos móveis, Windows e navegadores web, desenvolvido e operado pela BC Indústria Comércio e Representações de Malhas Ltda ("BC Malhas", "nós"). Ao criar uma conta ou utilizar o aplicativo, você concorda com os termos aqui descritos.</p>
+    <p>Esta política foi elaborada em conformidade com a Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 — LGPD) e, quando aplicável a usuários fora do Brasil, com outras legislações de proteção de dados, como o CCPA/CPRA para residentes da Califórnia.</p>
+  </section>
+
+  <section class="clause" id="s2">
+    <div class="clause-head">
+      <span class="clause-num">02</span>
+      <h2>Dados que coletamos</h2>
+    </div>
+    <p>Coletamos duas categorias de dados: informações fornecidas diretamente por você e informações geradas automaticamente pelo uso do aplicativo.</p>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr><th>Categoria</th><th>Dados</th><th>Origem</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Dados de conta</td><td>E-mail, ID de usuário, número de WhatsApp, idade e sexo</td><td>Informados por você no cadastro</td></tr>
+          <tr><td>Dados técnicos</td><td>Endereço IP, páginas visitadas, horários de acesso, tempo de uso, sistema operacional e tipo de dispositivo</td><td>Coletados automaticamente</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Alguns campos de cadastro, como idade e sexo, são opcionais e usados apenas para personalizar sua experiência dentro do aplicativo.</p>
+  </section>
+
+  <section class="clause" id="s3">
+    <div class="clause-head">
+      <span class="clause-num">03</span>
+      <h2>Como usamos os dados</h2>
+    </div>
+    <p>Utilizamos os dados coletados para as seguintes finalidades:</p>
+    <ul class="data-list">
+      <li>Viabilizar o funcionamento do aplicativo e das suas funcionalidades de CRM;</li>
+      <li>Autenticar sua conta e manter a segurança do acesso;</li>
+      <li>Personalizar conteúdo e comunicações relevantes ao seu uso;</li>
+      <li>Analisar métricas de uso para corrigir falhas e melhorar o aplicativo;</li>
+      <li>Cumprir obrigações legais e regulatórias aplicáveis.</li>
+    </ul>
+  </section>
+
+  <section class="clause" id="s4">
+    <div class="clause-head">
+      <span class="clause-num">04</span>
+      <h2>Cookies e tecnologias de rastreamento</h2>
+    </div>
+    <p>O aplicativo e eventuais SDKs de terceiros integrados a ele podem utilizar cookies, SDKs, pixels e tecnologias semelhantes para viabilizar funcionalidades, medir desempenho e gerar estatísticas de uso. Sempre que exigido por lei, o consentimento para uso dessas tecnologias é solicitado antes da coleta.</p>
+  </section>
+
+  <section class="clause" id="s5">
+    <div class="clause-head">
+      <span class="clause-num">05</span>
+      <h2>Compartilhamento com terceiros</h2>
+    </div>
+    <p>Não vendemos dados pessoais a terceiros. Compartilhamos apenas dados <strong>agregados e anonimizados</strong> — que não permitem identificar um usuário individualmente — com provedores de serviços externos que nos auxiliam na operação do aplicativo (por exemplo, infraestrutura de hospedagem e análise de uso).</p>
+  </section>
+
+  <section class="clause" id="s6">
+    <div class="clause-head">
+      <span class="clause-num">06</span>
+      <h2>Transferência internacional de dados</h2>
+    </div>
+    <p>Caso seus dados sejam processados por serviços ou servidores localizados fora do Brasil, essa transferência é realizada com base em Cláusulas Contratuais Padrão ou outros mecanismos legais reconhecidos pela LGPD, garantindo nível de proteção compatível com a legislação brasileira.</p>
+  </section>
+
+  <section class="clause" id="s7">
+    <div class="clause-head">
+      <span class="clause-num">07</span>
+      <h2>Retenção de dados</h2>
+    </div>
+    <p>Dados de conta são retidos por até <strong>12 meses</strong> após o encerramento do uso do aplicativo. Dados técnicos coletados automaticamente são retidos por até <strong>24 meses</strong>. Após esses períodos, os dados são excluídos ou anonimizados, salvo quando sua conservação for exigida por obrigação legal.</p>
+  </section>
+
+  <section class="clause" id="s8">
+    <div class="clause-head">
+      <span class="clause-num">08</span>
+      <h2>Segurança da informação</h2>
+    </div>
+    <p>Adotamos medidas técnicas, administrativas e organizacionais para proteger os dados pessoais contra acesso não autorizado, perda, alteração ou divulgação indevida, incluindo controles de acesso, armazenamento protegido e boas práticas de desenvolvimento seguro.</p>
+    <h3>Notificação de incidentes</h3>
+    <p>Em caso de incidente de segurança que envolva risco relevante aos dados pessoais dos usuários, comunicaremos os titulares afetados e a Autoridade Nacional de Proteção de Dados (ANPD), quando aplicável, conforme os prazos e critérios previstos em lei.</p>
+  </section>
+
+  <section class="clause" id="s9">
+    <div class="clause-head">
+      <span class="clause-num">09</span>
+      <h2>Seus direitos (LGPD)</h2>
+    </div>
+    <p>Como titular de dados pessoais, você pode, a qualquer momento, solicitar:</p>
+    <ul class="data-list">
+      <li>Confirmação da existência de tratamento de dados;</li>
+      <li>Acesso aos dados que mantemos sobre você;</li>
+      <li>Correção de dados incompletos, inexatos ou desatualizados;</li>
+      <li>Anonimização, bloqueio ou eliminação de dados desnecessários;</li>
+      <li>Portabilidade dos dados a outro fornecedor de serviço;</li>
+      <li>Eliminação dos dados tratados com base no seu consentimento;</li>
+      <li>Revogação do consentimento, a qualquer momento, sem ônus.</li>
+    </ul>
+    <p>Para exercer qualquer um desses direitos, entre em contato pelo e-mail informado na seção 14.</p>
+  </section>
+
+  <section class="clause" id="s10">
+    <div class="clause-head">
+      <span class="clause-num">10</span>
+      <h2>Residentes da Califórnia (CCPA/CPRA)</h2>
+    </div>
+    <p>Se você reside na Califórnia, poderá ter direitos adicionais previstos pelo California Consumer Privacy Act (CCPA) e pelo California Privacy Rights Act (CPRA), incluindo o direito de saber quais informações pessoais coletamos, solicitar sua exclusão e optar por não ter suas informações compartilhadas ou vendidas. Reforçamos que não vendemos dados pessoais.</p>
+  </section>
+
+  <section class="clause" id="s11">
+    <div class="clause-head">
+      <span class="clause-num">11</span>
+      <h2>Crianças e adolescentes</h2>
+    </div>
+    <p>O aplicativo BC CRM não é direcionado a menores de 16 anos. Caso o uso por um menor dessa idade seja necessário, é exigido o consentimento específico e destacado de um dos pais ou responsável legal, conforme a LGPD.</p>
+  </section>
+
+  <section class="clause" id="s12">
+    <div class="clause-head">
+      <span class="clause-num">12</span>
+      <h2>Como cancelar a coleta de dados</h2>
+    </div>
+    <p>Você pode interromper a coleta de novos dados a qualquer momento desinstalando o aplicativo. A desinstalação impede coletas futuras, mas não exclui automaticamente dados já transmitidos aos nossos servidores — para isso, solicite a exclusão conforme descrito na seção 9.</p>
+  </section>
+
+  <section class="clause" id="s13">
+    <div class="clause-head">
+      <span class="clause-num">13</span>
+      <h2>Alterações a esta política</h2>
+    </div>
+    <p>Esta política pode ser atualizada periodicamente para refletir mudanças legais, técnicas ou operacionais. Alterações relevantes serão comunicadas dentro do aplicativo ou por e-mail, com indicação da nova data de vigência.</p>
+  </section>
+
+  <section class="clause" id="s14">
+    <div class="clause-head">
+      <span class="clause-num">14</span>
+      <h2>Contato e encarregado</h2>
+    </div>
+    <p>Dúvidas, solicitações ou reclamações relacionadas a esta política ou ao tratamento de dados pessoais podem ser enviadas para o e-mail abaixo.</p>
+    <dl class="contact-card">
+      <dt>Controlador dos dados</dt>
+      <dd>BC Indústria Comércio e Representações de Malhas Ltda</dd>
+      <dt>CNPJ</dt>
+      <dd>06.078.921/0001-53</dd>
+      <dt>Endereço</dt>
+      <dd>Brusque, Santa Catarina, Brasil</dd>
+      <dt>E-mail de contato</dt>
+      <dd><a href="mailto:miilenapianizzer@gmail.com">miilenapianizzer@gmail.com</a></dd>
+    </dl>
+  </section>
+
+  <footer class="page-footer">
+    <span>BC CRM · BC Malhas</span>
+    <span>Vigente desde 26/08/2026</span>
+  </footer>
+
+</div>
+</body>
+</html>
